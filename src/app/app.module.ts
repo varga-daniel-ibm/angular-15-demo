@@ -6,8 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
 
-//Material
-import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -18,9 +16,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-
-    //Material
-    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
