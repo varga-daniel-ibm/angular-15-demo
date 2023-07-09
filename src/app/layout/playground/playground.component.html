@@ -1,10 +1,10 @@
-<mat-accordion>
+<mat-accordion [multi]="false">
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title> Angular Components </mat-panel-title>
     </mat-expansion-panel-header>
     <div class="panel-content">
-      <p>Some text</p>
+      <app-component-playground></app-component-playground>
     </div>
   </mat-expansion-panel>
 
@@ -13,7 +13,7 @@
       <mat-panel-title> Data Binding </mat-panel-title>
     </mat-expansion-panel-header>
     <div class="panel-content">
-      <p>Some text</p>
+      <app-data-binding-playground></app-data-binding-playground>
     </div>
   </mat-expansion-panel>
 
@@ -22,7 +22,7 @@
       <mat-panel-title> Reactive Forms </mat-panel-title>
     </mat-expansion-panel-header>
     <div class="panel-content">
-      <p>Some text</p>
+      <app-forms-playground></app-forms-playground>
     </div>
   </mat-expansion-panel>
 </mat-accordion>

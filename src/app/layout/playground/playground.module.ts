@@ -5,6 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 //Material
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ComponentPlaygroundComponent } from './component-playground/component-playground.component';
+import { FormsPlaygroundComponent } from './forms-playground/forms-playground.component';
+import { DataBindingPlaygroundComponent } from './data-binding-playground/data-binding-playground.component';
 const routes: Routes = [
   {
     path: '',
@@ -14,7 +17,10 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    PlaygroundComponent
+    PlaygroundComponent,
+    ComponentPlaygroundComponent,
+    FormsPlaygroundComponent,
+    DataBindingPlaygroundComponent
   ],
   imports: [
     CommonModule,
