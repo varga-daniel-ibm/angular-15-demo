@@ -5,9 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 //Material
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs';
+
 import { ComponentPlaygroundComponent } from './component-playground/component-playground.component';
 import { FormsPlaygroundComponent } from './forms-playground/forms-playground.component';
 import { DataBindingPlaygroundComponent } from './data-binding-playground/data-binding-playground.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -27,7 +30,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
 
     //Material
-    MatExpansionModule
+    MatExpansionModule,
+    MatTabsModule
   ]
 })
 export class PlaygroundModule { }
