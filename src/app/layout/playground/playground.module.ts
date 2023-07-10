@@ -10,6 +10,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { ComponentPlaygroundComponent } from './component-playground/component-playground.component';
 import { FormsPlaygroundComponent } from './forms-playground/forms-playground.component';
 import { DataBindingPlaygroundComponent } from './data-binding-playground/data-binding-playground.component';
+import { DefaultComponent } from './component-playground/default/default.component';
+import { LifecycleComponent } from './component-playground/lifecycle/lifecycle.component';
+import { StandaloneComponent } from './component-playground/standalone/standalone.component';
 
 const routes: Routes = [
   {
@@ -23,11 +26,14 @@ const routes: Routes = [
     PlaygroundComponent,
     ComponentPlaygroundComponent,
     FormsPlaygroundComponent,
-    DataBindingPlaygroundComponent
+    DataBindingPlaygroundComponent,
+    DefaultComponent,
+    LifecycleComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    StandaloneComponent,
 
     //Material
     MatExpansionModule,
