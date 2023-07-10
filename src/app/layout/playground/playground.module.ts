@@ -12,7 +12,6 @@ import { FormsPlaygroundComponent } from './forms-playground/forms-playground.co
 import { DataBindingPlaygroundComponent } from './data-binding-playground/data-binding-playground.component';
 import { DefaultComponent } from './component-playground/default/default.component';
 import { LifecycleComponent } from './component-playground/lifecycle/lifecycle.component';
-import { StandaloneComponent } from './component-playground/standalone/standalone.component';
 
 const routes: Routes = [
   {
@@ -33,7 +32,6 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    StandaloneComponent,
 
     //Material
     MatExpansionModule,
