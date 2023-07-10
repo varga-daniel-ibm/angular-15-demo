@@ -6,7 +6,10 @@
   </mat-tab>
   <mat-tab label="Lifecycle Hooks">
     <div class="tab-content">
-      <app-lifecycle></app-lifecycle>
+      <button mat-stroked-button color="primary" (click)="onClick()">
+        {{ isLifeCycleHidden ? "Show" : "Hide" }}
+      </button>
+      <app-lifecycle *ngIf="!isLifeCycleHidden"></app-lifecycle>
     </div>
   </mat-tab>
 </mat-tab-group>

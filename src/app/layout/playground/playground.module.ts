@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 //Material
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
 
 import { ComponentPlaygroundComponent } from './component-playground/component-playground.component';
 import { FormsPlaygroundComponent } from './forms-playground/forms-playground.component';
@@ -35,7 +36,8 @@ const routes: Routes = [
 
     //Material
     MatExpansionModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonModule
   ]
 })
 export class PlaygroundModule { }
