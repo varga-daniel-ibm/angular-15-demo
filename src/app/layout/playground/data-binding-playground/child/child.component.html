@@ -1,1 +1,8 @@
-<p>child works!</p>
+<p>
+  Favorite city is: <b> {{ favoriteCity }}</b>
+</p>
+
+
+<button mat-stroked-button color="primary" (click)="emitFavoriteCountry()">
+  Emit favorite country to parent component
+</button>

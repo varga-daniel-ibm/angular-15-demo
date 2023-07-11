@@ -1,17 +1,48 @@
 <mat-tab-group mat-stretch-tabs="false" animationDuration="0ms">
+  <mat-tab label="Simple one-way data binding">
+    <div class="tab-content">
+      <button mat-stroked-button color="primary" (click)="changeFavoriteFood()">
+        Change favorite food!
+      </button>
+      <p style="padding-top: 10px">This value is defined in .ts file: <b>{{ favoriteFood }}</b></p>
+    </div>
+  </mat-tab>
   <mat-tab label="Inputs">
     <div class="tab-content">
-      <app-input></app-input>
+      <mat-form-field>
+        <mat-label>Favorite food</mat-label>
+        <input matInput [value]="favoriteFood" name="favorite-food" />
+      </mat-form-field>
+      <p style="padding-top: 10px">This value is defined in .ts file: <b>{{ favoriteFood }}</b></p>
     </div>
   </mat-tab>
   <mat-tab label="Outputs">
     <div class="tab-content">
-      <app-output></app-output>
+      <mat-form-field>
+        <mat-label>Favorite food</mat-label>
+        <input matInput (input)="onFavoriteFoodInputChange($event)" name="favorite-food" />
+      </mat-form-field>
+      <p style="padding-top: 10px">This value is defined in .ts file: <b>{{ favoriteFood }}</b></p>
     </div>
   </mat-tab>
   <mat-tab label="Two-way data binding">
     <div class="tab-content">
-      <app-two-way></app-two-way>
+      <mat-form-field>
+        <mat-label>Favorite food</mat-label>
+        <input matInput [value]="favoriteFood" (input)="onFavoriteFoodInputChange($event)" name="favorite-food" />
+      </mat-form-field>
+      <p style="padding-top: 10px">This value is defined in .ts file: <b>{{ favoriteFood }}</b></p>
+
+      <!-- <mat-form-field>
+        <mat-label>Favorite food</mat-label>
+        <input matInput [(ngModel)]="favoriteFood" name="favorite-food" />
+      </mat-form-field>
+      <p style="padding-top: 10px">This value is defined in .ts file: <b>{{ favoriteFood }}</b></p> -->
+    </div>
+  </mat-tab>
+  <mat-tab label="Custom inputs and outputs">
+    <div class="tab-content">
+      <app-child [favoriteCity]="favoriteCity" (onChangeFavoriteCountry)="onChangeFavoriteCountry($event)"></app-child>
     </div>
   </mat-tab>
 </mat-tab-group>
