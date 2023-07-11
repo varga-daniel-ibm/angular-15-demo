@@ -13,6 +13,9 @@ import { FormsPlaygroundComponent } from './forms-playground/forms-playground.co
 import { DataBindingPlaygroundComponent } from './data-binding-playground/data-binding-playground.component';
 import { DefaultComponent } from './component-playground/default/default.component';
 import { LifecycleComponent } from './component-playground/lifecycle/lifecycle.component';
+import { InputComponent } from './data-binding-playground/input/input.component';
+import { OutputComponent } from './data-binding-playground/output/output.component';
+import { TwoWayComponent } from './data-binding-playground/two-way/two-way.component';
 
 const routes: Routes = [
   {
@@ -28,7 +31,10 @@ const routes: Routes = [
     FormsPlaygroundComponent,
     DataBindingPlaygroundComponent,
     DefaultComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    InputComponent,
+    OutputComponent,
+    TwoWayComponent
   ],
   imports: [
     CommonModule,
