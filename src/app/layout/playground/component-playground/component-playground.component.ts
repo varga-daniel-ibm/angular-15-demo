@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./component-playground.component.scss']
 })
 export class ComponentPlaygroundComponent {
-  isLifeCycleHidden: boolean = true;
+  isLifeCycleDisplayed: boolean = false;
 
   onClick(): void {
-    this.isLifeCycleHidden = !this.isLifeCycleHidden;
+    this.isLifeCycleDisplayed = !this.isLifeCycleDisplayed;
   }
 }
