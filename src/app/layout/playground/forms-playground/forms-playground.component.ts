@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-forms-playground',
@@ -7,9 +7,17 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./forms-playground.component.scss']
 })
 export class FormsPlaygroundComponent {
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  emailFormControl = new FormControl('control example', [Validators.required, Validators.email]);
 
-  submitForm(): void {
+  exampleForm: FormGroup = new FormGroup({
+    email: new FormControl('group example', [Validators.required, Validators.email])
+  });
+
+  submitFormControl(): void {
     console.log(this.emailFormControl)
+  }
+
+  submitFormGroup(): void {
+    console.log(this.exampleForm)
   }
 }
